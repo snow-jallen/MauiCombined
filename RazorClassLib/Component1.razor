@@ -4,16 +4,20 @@
     This component is defined in the <strong>RazorClassLib</strong> library.
 </div>
 
-@if(data != null)
-{
-    <p>I got @data.Count() pieces of data!</p>
-    @foreach(var bit in data)
+<div class="container">
+    @if (data != null)
     {
-        <div class="row">@bit</div>
+        <p>I got @data.Count() piece@(data.Count() > 1 ? "s" : "") of data!</p>
+        <ul>
+        @foreach (var bit in data)
+        {
+            <li>@bit</li>
+        }
+        </ul>
     }
-}
 
-<Calculator />
+    <Calculator />
+</div>
 
 @code {
     protected override async Task OnInitializedAsync()

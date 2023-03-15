@@ -5,47 +5,29 @@
              xmlns:rcl="clr-namespace:RazorClassLib;assembly=RazorClassLib"
              x:Class="MauiRegular.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid RowDefinitions="Auto,Auto,*,Auto">
+        <Image Source="dotnet_bot.png"
+               SemanticProperties.Description="Cute dot net bot waving hi to you!"
+               HeightRequest="200"
+               HorizontalOptions="Center" />
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
+        <Button x:Name="CounterBtn"
+                Grid.Row="1"
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
-            <BlazorWebView HostPage="wwwroot/index.html">
-                <BlazorWebView.RootComponents>
-                    <RootComponent Selector="#app"
-                                   ComponentType="{x:Type rcl:Component1}" />
-                </BlazorWebView.RootComponents>
-            </BlazorWebView>
+        <BlazorWebView HostPage="wwwroot/index.html"
+                       Grid.Row="2">
+            <BlazorWebView.RootComponents>
+                <RootComponent Selector="#app"
+                               ComponentType="{x:Type rcl:Component1}" />
+            </BlazorWebView.RootComponents>
+        </BlazorWebView>
 
-            <Label Text="The blazor component is above this." />
-        </VerticalStackLayout>
-    </ScrollView>
+        <Label Text="The blazor component is above this."
+               Grid.Row="3"/>
+    </Grid>
 
 </ContentPage>
