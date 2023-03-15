@@ -1,6 +1,5 @@
 using BlazorServerApp.Data;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+using RazorClassLib;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<IDataService, BlazorServerDataService>();
 
 var app = builder.Build();
 
@@ -29,3 +29,11 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+
+public class BlazorServerDataService : IDataService
+{
+    public Task<IEnumerable<string>> GetDataAsync()
+    {
+        return Task.FromResult<IEnumerable<string>>(Directory.GetFiles(Environment.CurrentDirectory));
+    }
+}

@@ -44,6 +44,7 @@
                 </BlazorWebView.RootComponents>
             </BlazorWebView>
 
+            <Label Text="The blazor component is above this." />
         </VerticalStackLayout>
     </ScrollView>
 

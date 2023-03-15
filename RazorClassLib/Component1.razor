@@ -1,5 +1,25 @@
-﻿<div class="my-component">
+﻿@inject IDataService dataService
+
+<div class="my-component">
     This component is defined in the <strong>RazorClassLib</strong> library.
 </div>
 
+@if(data != null)
+{
+    <p>I got @data.Count() pieces of data!</p>
+    @foreach(var bit in data)
+    {
+        <div class="row">@bit</div>
+    }
+}
+
 <Calculator />
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        data = await dataService.GetDataAsync();
+    }
+
+    IEnumerable<string> data;
+}
