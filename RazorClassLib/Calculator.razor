@@ -1,0 +1,35 @@
+﻿<h3>Calculator</h3>
+
+<input type="number" @bind=Num1 />
++
+<input type="number" @bind=Num2 />
+=
+@sum.ToString("n0")
+
+@code {
+    private int num1;
+
+    public int Num1
+    {
+        get { return num1; }
+        set
+        {
+            num1 = value;
+            sum = num1 + num2;
+        }
+    }
+
+    private int num2;
+
+    public int Num2
+    {
+        get { return num2; }
+        set
+        {
+            num2 = value;
+            sum = num1 + num2;
+        }
+    }
+
+    public int sum;
+}

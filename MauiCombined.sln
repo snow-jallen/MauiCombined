@@ -4,11 +4,11 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiCombined", "MauiCombined\MauiCombined.csproj", "{2C84A627-7115-4BFB-B4F6-0048D3CCB261}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLib", "RazorClassLib\RazorClassLib.csproj", "{B4EE7C4E-DAE9-46CA-AA99-C28B9C454D0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorClassLib", "RazorClassLib\RazorClassLib.csproj", "{B4EE7C4E-DAE9-46CA-AA99-C28B9C454D0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{F602A91F-1E96-43C7-B43F-6C7AD0BFC357}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{F602A91F-1E96-43C7-B43F-6C7AD0BFC357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiRegular", "MauiRegular\MauiRegular.csproj", "{350FF4D2-5B07-4534-96B4-34F43781F11B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiRegular", "MauiRegular\MauiRegular.csproj", "{350FF4D2-5B07-4534-96B4-34F43781F11B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,7 +41,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 		SolutionGuid = {4C313500-5AC2-4649-8E2E-844F7494D6C2}
+		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 	EndGlobalSection
 EndGlobal
